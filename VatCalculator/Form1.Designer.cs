@@ -1,6 +1,6 @@
 ﻿namespace VatCalculator
 {
-    partial class Form1
+    partial class VatCalculatorForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -30,12 +30,12 @@
         {
             this.btnCalculate = new System.Windows.Forms.Button();
             this.netAmount = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblEnterEmount = new System.Windows.Forms.Label();
+            this.lblNetValue = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.vat = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblVatRate = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.netValue = new System.Windows.Forms.Label();
             this.vatValue = new System.Windows.Forms.Label();
@@ -63,24 +63,24 @@
             this.netAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.netAmount.TextChanged += new System.EventHandler(this.amount);
             // 
-            // label1
+            // lblEnterEmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Enter the amount";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblEnterEmount.AutoSize = true;
+            this.lblEnterEmount.Location = new System.Drawing.Point(34, 20);
+            this.lblEnterEmount.Name = "lblEnterEmount";
+            this.lblEnterEmount.Size = new System.Drawing.Size(117, 17);
+            this.lblEnterEmount.TabIndex = 2;
+            this.lblEnterEmount.Text = "Enter the amount";
+            this.lblEnterEmount.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lblNetValue
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Net value";
+            this.lblNetValue.AutoSize = true;
+            this.lblNetValue.Location = new System.Drawing.Point(34, 91);
+            this.lblNetValue.Name = "lblNetValue";
+            this.lblNetValue.Size = new System.Drawing.Size(68, 17);
+            this.lblNetValue.TabIndex = 6;
+            this.lblNetValue.Text = "Net value";
             // 
             // label3
             // 
@@ -110,14 +110,14 @@
             this.vat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.vat.TextChanged += new System.EventHandler(this.vat_TextChanged);
             // 
-            // label5
+            // lblVatRate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(205, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "VAT %";
+            this.lblVatRate.AutoSize = true;
+            this.lblVatRate.Location = new System.Drawing.Point(205, 20);
+            this.lblVatRate.Name = "lblVatRate";
+            this.lblVatRate.Size = new System.Drawing.Size(51, 17);
+            this.lblVatRate.TabIndex = 10;
+            this.lblVatRate.Text = "VAT %";
             // 
             // btnClear
             // 
@@ -157,7 +157,7 @@
             this.gross.Size = new System.Drawing.Size(0, 29);
             this.gross.TabIndex = 14;
             // 
-            // Form1
+            // VatCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,16 +166,16 @@
             this.Controls.Add(this.vatValue);
             this.Controls.Add(this.netValue);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblVatRate);
             this.Controls.Add(this.vat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNetValue);
+            this.Controls.Add(this.lblEnterEmount);
             this.Controls.Add(this.netAmount);
             this.Controls.Add(this.btnCalculate);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "VatCalculatorForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VATCalculator";
@@ -189,12 +189,12 @@
 
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.TextBox netAmount;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEnterEmount;
+        private System.Windows.Forms.Label lblNetValue;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox vat;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblVatRate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label netValue;
         private System.Windows.Forms.Label vatValue;

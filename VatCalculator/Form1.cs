@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace VatCalculator
 {
-    public partial class Form1 : Form
+    public partial class VatCalculatorForm : Form
     {
         
-        public Form1()
+        public VatCalculatorForm()
         {
             InitializeComponent();
         }
@@ -23,10 +23,17 @@ namespace VatCalculator
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            netValue.Text = netAmount.Text;
-            vatValue.Text = (Double.Parse(netAmount.Text) * Double.Parse(vat.Text)/100).ToString();
-            gross.Text = ((Double.Parse(netAmount.Text)+(Double.Parse(netAmount.Text) * Double.Parse(vat.Text) / 100))).ToString();
+                netValue.Text = netAmount.Text;
+                Decimal netAmountNumber = Decimal.Parse(netAmount.Text);
+                Decimal vatRateNumber = Decimal.Parse(vat.Text);
+                Decimal vatNumber = calculateVat(netAmountNumber, vatRateNumber);
+                vatValue.Text = vatNumber.ToString();
+                gross.Text = (netAmountNumber + vatNumber).ToString();
+        }
 
+        private Decimal calculateVat(Decimal netAmountNumber, Decimal vatRateNumber)
+        {
+            return netAmountNumber * vatRateNumber / 100;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
